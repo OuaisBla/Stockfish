@@ -34,7 +34,7 @@ namespace {
   constexpr Score Backward = S( 9, 24);
   constexpr Score Doubled  = S(11, 56);
   constexpr Score Isolated = S( 5, 15);
-
+  
   // Connected pawn bonus
   constexpr int Connected[RANK_NB] = { 0, 13, 24, 18, 65, 100, 175, 330 };
 
@@ -134,10 +134,11 @@ namespace {
             v = 17 * popcount(support) + (v >> (opposed + 1));
             score += make_score(v, v * (r - 2) / 4);
         }
-        else if (!neighbours)
+
+        if (!neighbours)
             score -= Isolated, e->weakUnopposed[Us] += !opposed;
 
-        else if (backward)
+        if (backward)
             score -= Backward, e->weakUnopposed[Us] += !opposed;
 
         if (doubled && !support)
