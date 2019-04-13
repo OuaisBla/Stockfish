@@ -613,10 +613,12 @@ namespace {
       return std::min(distance(pos.square<KING>(c), s), 5);
     };
 
-    Bitboard b, bb, squaresToQueen, defendedSquares, unsafeSquares;
+    Bitboard b, bb, squaresToQueen, ourPawns, neighbours, support, defendedSquares, unsafeSquares;
     Score score = SCORE_ZERO;
 
     b = pe->passed_pawns(Us);
+
+    ourPawns = pos.pieces(Us, PAWN);
 
     while (b)
     {
@@ -627,6 +629,18 @@ namespace {
         int r = relative_rank(Us, s);
 
         Score bonus = PassedRank[r];
+
+        File f = file_of(s);
+        neighbours = ourPawns & adjacent_files_bb(f);
+        support = neighbours & rank_bb(s - Up);
+
+        int pawnSupporting = popcount(support);
+
+        if (pawnSupporting)
+        {
+          // Add a bonus if the passed pawn is supported in proportion on how much pawn support it.
+          bonus += PassedRank[pawnSupporting + 1];
+        }
 
         if (r > RANK_3)
         {
