@@ -119,3 +119,38 @@ TEST_F(PassedPawnTest, TestPassedPawn_2) {
   EXPECT_TRUE(passedPawns[BLACK] & Square::SQ_F3);
   EXPECT_TRUE(passedPawns[WHITE] & Square::SQ_H5);
 }
+
+TEST_F(PassedPawnTest, TestPassedPawn_3) {
+
+  const char fen[] = "5k2/4npp1/1Pp5/P1R5/7p/7P/r2r2P1/2R2K2 w - - 0 1";
+
+  Bitboard passedPawns[COLOR_NB] = { 0, 0 };
+
+  evaluatePassedPawn(fen, passedPawns);
+
+  EXPECT_TRUE(passedPawns[WHITE] & Square::SQ_B6);
+  EXPECT_TRUE(passedPawns[WHITE] & Square::SQ_A5);
+  EXPECT_TRUE(passedPawns[BLACK] & Square::SQ_C6);
+
+  EXPECT_FALSE(passedPawns[BLACK] & ~Square::SQ_C6);
+  EXPECT_FALSE(passedPawns[WHITE] & ~Square::SQ_B6 & ~Square::SQ_A5);
+}
+
+TEST_F(PassedPawnTest, TestPassedPawn_4) {
+
+  const char fen[] = "4k3/8/8/1P2P2p/2Pp1p1P/5PP1/8/4K3 w - - 0 1";
+
+  Bitboard passedPawns[COLOR_NB] = { 0, 0 };
+
+  evaluatePassedPawn(fen, passedPawns);
+
+  EXPECT_TRUE(passedPawns[WHITE] & Square::SQ_B5);
+  EXPECT_TRUE(passedPawns[WHITE] & Square::SQ_C4);
+  EXPECT_TRUE(passedPawns[WHITE] & Square::SQ_E5);
+
+  EXPECT_TRUE(passedPawns[BLACK] & Square::SQ_D4);
+
+  EXPECT_FALSE(passedPawns[BLACK] & ~Square::SQ_D4);
+  EXPECT_FALSE(passedPawns[WHITE] & ~Square::SQ_B5 & ~Square::SQ_C4 & ~Square::SQ_E5);
+}
+
