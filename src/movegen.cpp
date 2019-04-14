@@ -23,7 +23,6 @@
 #include "movegen.h"
 #include "position.h"
 
-namespace {
 
   template<GenType Type, Direction D>
   ExtMove* make_promotions(ExtMove* moveList, Square to, Square ksq) {
@@ -249,7 +248,6 @@ namespace {
     return moveList;
   }
 
-} // namespace
 
 
 /// <CAPTURES>     Generates all pseudo-legal captures and queen promotions

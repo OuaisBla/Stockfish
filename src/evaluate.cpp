@@ -795,6 +795,7 @@ namespace {
   template<Tracing T>
   Value Evaluation<T>::value() {
 
+    // Eval is never called when in check
     assert(!pos.checkers());
 
     // Probe the material hash table
@@ -878,8 +879,6 @@ Value Eval::evaluate(const Position& pos) {
 std::string Eval::trace(const Position& pos) {
 
   std::memset(scores, 0, sizeof(scores));
-
-  pos.this_thread()->contempt = SCORE_ZERO; // Reset any dynamic contempt
 
   Value v = Evaluation<TRACE>(pos).value();
 

@@ -28,9 +28,6 @@
 #include "uci.h"
 #include "syzygy/tbprobe.h"
 
-namespace PSQT {
-  void init();
-}
 
 int main(int argc, char* argv[]) {
 
