@@ -15,114 +15,114 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\benchmark.cpp">
+    <ClCompile Include="..\src\benchmark.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\bitbase.cpp">
+    <ClCompile Include="..\src\bitbase.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\bitboard.cpp">
+    <ClCompile Include="..\src\bitboard.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\endgame.cpp">
+    <ClCompile Include="..\src\endgame.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\evaluate.cpp">
+    <ClCompile Include="..\src\evaluate.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\material.cpp">
+    <ClCompile Include="..\src\material.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\misc.cpp">
+    <ClCompile Include="..\src\misc.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\movegen.cpp">
+    <ClCompile Include="..\src\movegen.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\movepick.cpp">
+    <ClCompile Include="..\src\movepick.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\pawns.cpp">
+    <ClCompile Include="..\src\pawns.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\position.cpp">
+    <ClCompile Include="..\src\position.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\psqt.cpp">
+    <ClCompile Include="..\src\psqt.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\search.cpp">
+    <ClCompile Include="..\src\search.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\thread.cpp">
+    <ClCompile Include="..\src\syzygy\tbprobe.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\timeman.cpp">
+    <ClCompile Include="..\src\thread.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\tt.cpp">
+    <ClCompile Include="..\src\timeman.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\uci.cpp">
+    <ClCompile Include="..\src\tt.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\ucioption.cpp">
+    <ClCompile Include="..\src\uci.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\syzygy\tbprobe.cpp">
+    <ClCompile Include="..\src\ucioption.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\bitboard.h">
+    <ClInclude Include="..\src\bitboard.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\endgame.h">
+    <ClInclude Include="..\src\endgame.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\evaluate.h">
+    <ClInclude Include="..\src\evaluate.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\material.h">
+    <ClInclude Include="..\src\material.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\misc.h">
+    <ClInclude Include="..\src\misc.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\movegen.h">
+    <ClInclude Include="..\src\movegen.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\movepick.h">
+    <ClInclude Include="..\src\movepick.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\pawns.h">
+    <ClInclude Include="..\src\pawns.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\position.h">
+    <ClInclude Include="..\src\position.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\search.h">
+    <ClInclude Include="..\src\search.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\thread.h">
+    <ClInclude Include="..\src\syzygy\tbprobe.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\thread_win32_osx.h">
+    <ClInclude Include="..\src\thread.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\timeman.h">
+    <ClInclude Include="..\src\thread_win32_osx.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\tt.h">
+    <ClInclude Include="..\src\timeman.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\types.h">
+    <ClInclude Include="..\src\tt.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\uci.h">
+    <ClInclude Include="..\src\types.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\syzygy\tbprobe.h">
+    <ClInclude Include="..\src\uci.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
