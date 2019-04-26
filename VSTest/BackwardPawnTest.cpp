@@ -94,6 +94,8 @@ TEST_F(BackwardPawnTest, TestBackwardPawn_2) {
   evaluateBackwardPawn(fen, backwardPawn);
 
   EXPECT_TRUE(backwardPawn[WHITE] & Square::SQ_F2);
+  EXPECT_TRUE(backwardPawn[BLACK] & Square::SQ_D5);
+  EXPECT_TRUE(backwardPawn[BLACK] & Square::SQ_G4);
 }
 
 TEST_F(BackwardPawnTest, TestBackwardPawn_3) {
