@@ -129,7 +129,7 @@ namespace {
             int vmg =  Connected[r] * (phalanx ? 3 : 2) / (opposed ? 2 : 1)
                    + 17 * popcount(support);
 
-            int veg = v * std::max((r - 2) / 4, 1);
+            int veg = vmg * std::max((r - 2) / 4, 1);
 
             score += make_score(vmg,  veg);
 
