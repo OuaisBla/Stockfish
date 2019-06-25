@@ -226,8 +226,10 @@ void MainThread::search() {
 
   Thread* bestThread = this;
 
+  size_t const multiPV = Options["MultiPV"];
+
   // Check if there are threads with a better score than main thread
-  if (    Options["MultiPV"] == 1
+  if (   multiPV == 1
       && !Limits.depth
       && !Skill(Options["Skill Level"]).enabled()
       &&  rootMoves[0].pv[0] != MOVE_NONE)
