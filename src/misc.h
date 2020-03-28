@@ -121,4 +121,8 @@ namespace WinProcGroup {
   void bindThisThread(size_t idx);
 }
 
+namespace PSQT {
+  void init();
+}
+
 #endif // #ifndef MISC_H_INCLUDED

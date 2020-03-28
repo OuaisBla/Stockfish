@@ -1,0 +1,28 @@
+[Event "CCC 9: The Gauntlet Final (10|5)"]
+[Site "?"]
+[Date "2019.07.10"]
+[Round "1"]
+[White "Leelenstein"]
+[Black "Stockfish"]
+[Result "1-0"]
+[ECO "C55"]
+[GameDuration "00:20:07"]
+[GameEndTime "2019-07-10T20:33:49.889 PDT"]
+[GameStartTime "2019-07-10T20:13:41.921 PDT"]
+[Opening "Two knights defense (Modern Bishop's Opening)"]
+[PlyCount "161"]
+[TimeControl "600+5"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3 h6 5. c3 g6 6. O-O Bg7 7. d4 Qe7 8. Re1 d6
+9. a4 O-O 10. h3 b6 11. Nbd2 exd4 12. cxd4 Bb7 13. d5 Nb4 14. a5 a6 15. Ra4 c5
+16. axb6 Nd7 17. Bf1 Nxb6 18. Ra3 Kh7 19. Nc4 Nxc4 20. Bxc4 a5 21. b3 Rfe8 22.
+Bf4 Qf8 23. Bb5 Red8 24. g4 Bc8 25. Bg3 Qe7 26. Kh2 Qb7 27. Bc4 Bb2 28. Ra4 Bd7
+29. Qd2 Bxa4 30. Qxb2 Bb5 31. Qf6 Rd7 32. Bf4 Bxc4 33. Bxh6 Kxh6 34. Nh4 Qxd5
+35. exd5 Bd3 36. Re7 Rxe7 37. Qxe7 Kg7 38. Nf3 Nxd5 39. Qxd6 Nb4 40. Qxc5 Kg8
+41. Ne5 Be4 42. Nd7 Nd5 43. Qd4 Re8 44. Kg3 Re7 45. Nc5 Bh1 46. Qa1 Rc7 47. Qxa5
+f6 48. f3 Kf7 49. b4 Bxf3 50. Kxf3 Rc6 51. Qa2 Rd6 52. b5 Ke7 53. Qa7+ Ke8 54.
+Ne4 Rd7 55. b6 Rxa7 56. bxa7 Nb6 57. Nxf6+ Kf7 58. Nd5 Na8 59. h4 Ke6 60. Ke4
+Kf7 61. h5 gxh5 62. gxh5 Kg7 63. h6+ Kxh6 64. Ke5 Kg5 65. Kd6 Kg4 66. Nb6 Nxb6
+67. Kc6 Nc8 68. a8=Q Ne7+ 69. Kd6 Ng6 70. Qg8 Kf5 71. Qf7+ Kg5 72. Kd5 Nf4+ 73.
+Ke4 Nh5 74. Ke5 Kg4 75. Qg6+ Kf3 76. Qxh5+ Ke3 77. Qd1 Kf2 78. Kf4 Kg2 79. Qe2+
+Kh1 80. Kf3 Kg1 81. Qg2# 1-0
