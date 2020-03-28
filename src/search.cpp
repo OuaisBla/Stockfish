@@ -160,33 +160,34 @@ namespace {
   void update_all_stats(const Position& pos, Stack* ss, Move bestMove, Value bestValue, Value beta, Square prevSq,
                         Move* quietsSearched, int quietCount, Move* capturesSearched, int captureCount, Depth depth);
 
-  // perft() is our utility to verify move generation. All the leaf nodes up
-  // to the given depth are generated and counted, and the sum is returned.
-  template<bool Root>
-  uint64_t perft(Position& pos, Depth depth) {
-
-    StateInfo st;
-    uint64_t cnt, nodes = 0;
-    const bool leaf = (depth == 2);
-
-    for (const auto& m : MoveList<LEGAL>(pos))
-    {
-        if (Root && depth <= 1)
-            cnt = 1, nodes++;
-        else
-        {
-            pos.do_move(m, st);
-            cnt = leaf ? MoveList<LEGAL>(pos).size() : perft<false>(pos, depth - 1);
-            nodes += cnt;
-            pos.undo_move(m);
-        }
-        if (Root)
-            sync_cout << UCI::move(m, pos.is_chess960()) << ": " << cnt << sync_endl;
-    }
-    return nodes;
-  }
 
 } // namespace
+
+  // perft() is our utility to verify move generation. All the leaf nodes up
+  // to the given depth are generated and counted, and the sum is returned.
+template<bool Root>
+uint64_t perft(Position& pos, Depth depth) {
+
+  StateInfo st;
+  uint64_t cnt, nodes = 0;
+    const bool leaf = (depth == 2);
+
+  for (const auto& m : MoveList<LEGAL>(pos))
+  {
+        if (Root && depth <= 1)
+      cnt = 1, nodes++;
+    else
+    {
+      pos.do_move(m, st);
+            cnt = leaf ? MoveList<LEGAL>(pos).size() : perft<false>(pos, depth - 1);
+      nodes += cnt;
+      pos.undo_move(m);
+    }
+    if (Root)
+      sync_cout << UCI::move(m, pos.is_chess960()) << ": " << cnt << sync_endl;
+  }
+  return nodes;
+}
 
 
 /// Search::init() is called at startup to initialize various lookup tables
