@@ -1,0 +1,16 @@
+[Event "CCCC 1: Rapid Rumble (15|5) Stage 3"]
+[Site "Chess.com"]
+[Date "2018.11.13"]
+[Round "?"]
+[White "Stockfish 18111122"]
+[Black "Komodo 12.2.2"]
+[Result "*"]
+[Opening "French Defense: Winawer Variation"]
+[Time "21:32:09"]
+[TimeControl "300+2"]
+[Termination "unterminated"]
+[PlyCount "2"]
+[WhiteType "human"]
+[BlackType "program"]
+
+1. Nc3 1. Rb4 *
