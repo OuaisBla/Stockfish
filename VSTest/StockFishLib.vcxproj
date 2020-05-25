@@ -28,6 +28,7 @@
     <ClCompile Include="..\src\thread.cpp" />
     <ClCompile Include="..\src\timeman.cpp" />
     <ClCompile Include="..\src\tt.cpp" />
+    <ClCompile Include="..\src\tune.cpp" />
     <ClCompile Include="..\src\uci.cpp" />
     <ClCompile Include="..\src\ucioption.cpp" />
   </ItemGroup>
