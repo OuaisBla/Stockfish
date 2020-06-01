@@ -570,12 +570,12 @@ bool Position::legal(Move m) const {
 
 bool Position::pseudo_legal(const Move m) const {
 
-  Color us = sideToMove;
-  Square from = from_sq(m);
-  Square to = to_sq(m);
-  Piece pc = moved_piece(m);
+  Color const us = sideToMove;
+  Square const from = from_sq(m);
+  Square const to = to_sq(m);
+  Piece const pc = moved_piece(m);
 
-  PieceType piece = type_of(pc);
+  PieceType const piece = type_of(pc);
 
   const Bitboard TRank8BB = (us == WHITE ? Rank8BB : Rank1BB);
 
@@ -592,8 +592,8 @@ bool Position::pseudo_legal(const Move m) const {
   {
   case PROMOTION:
   {
-      Bitboard TRank7BB = (us == WHITE ? Rank7BB : Rank2BB);
-      Piece captured = piece_on(to);
+      Bitboard const TRank7BB = (us == WHITE ? Rank7BB : Rank2BB);
+      Piece const captured = piece_on(to);
 
       if (!
           (piece == PAWN &&
@@ -612,9 +612,9 @@ bool Position::pseudo_legal(const Move m) const {
   case CASTLING:
   {
       // Castling is encoded as 'King captures the rook'
-      CastlingRights cr = us & (to > from ? KING_SIDE : QUEEN_SIDE);
+      CastlingRights const cr = us & (to > from ? KING_SIDE : QUEEN_SIDE);
 
-      Piece rook = piece_on(to);
+      Piece const rook = piece_on(to);
 
       return (
         piece == KING &&
@@ -626,7 +626,7 @@ bool Position::pseudo_legal(const Move m) const {
   }
   case ENPASSANT:
   {
-      Square capsq = to - pawn_push(us);
+      Square const capsq = to - pawn_push(us);
 
       return piece == PAWN &&
           piece_on(to) == NO_PIECE &&
@@ -662,15 +662,15 @@ bool Position::pseudo_legal(const Move m) const {
 
   if (piece == PAWN)
   {
-      if (!(attacks_from<PAWN>(from, us)& pieces(~us)& to) // Not a capture
-          && !( (from + pawn_push(us) == to) && empty(to))       // Not a single push
+      if (!(pawn_attacks_bb(us, from)& pieces(~us)& to)       // Not a capture
+          && !( (from + pawn_push(us) == to) && empty(to))    // Not a single push
           && !( (from + 2 * pawn_push(us) == to)              // Not a double push
                && (relative_rank(us, from) == RANK_2)
                && empty(to)
                && empty(to - pawn_push(us))))
           return false;
   }
-  else if (!(attacks_from(piece, from) & to))
+  else if (!(attacks_bb(piece, from, pieces()) & to))
       return false;
 
 

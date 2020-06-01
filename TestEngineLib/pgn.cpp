@@ -786,7 +786,7 @@ bool PGNParser::move_is_san(Position const& pos, Move m, const char* ref) {
 
 		// A disambiguation occurs if we have more then one piece of type 'pt'
 		// that can reach 'to' with a legal move.
-		others = b = (pos.attacks_from(type_of(pc), to) & pos.pieces(pos.side_to_move(), pt)) ^ from;
+		others = b = (attacks_bb(type_of(pc), to, pos.pieces()) & pos.pieces(pos.side_to_move(), pt)) ^ from;
 
 		while (Strict && b)
 		{
