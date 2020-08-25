@@ -20,6 +20,8 @@
     <ClCompile Include="..\src\misc.cpp" />
     <ClCompile Include="..\src\movegen.cpp" />
     <ClCompile Include="..\src\movepick.cpp" />
+    <ClCompile Include="..\src\nnue\evaluate_nnue.cpp" />
+    <ClCompile Include="..\src\nnue\features\half_kp.cpp" />
     <ClCompile Include="..\src\pawns.cpp" />
     <ClCompile Include="..\src\position.cpp" />
     <ClCompile Include="..\src\psqt.cpp" />
@@ -100,6 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -121,6 +124,7 @@
       <StringPooling>true</StringPooling>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <DebugInformationFormat>None</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
